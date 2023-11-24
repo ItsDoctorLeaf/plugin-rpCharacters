@@ -52,10 +52,16 @@ To setup the start position (Where a void box should be), set the following vari
 <b>startY</b>: \<INTEGER\><br>
 <b>startZ</b>: \<INTEGER\><br>
 <br>
+### Spawn Position
 To setup the spawn position (Where the main spawn should be), set the following variables:<br>
 <b>spawnX</b>: \<INTEGER\><br>
 <b>spawnY</b>: \<INTEGER\><br>
 <b>spawnZ</b>: \<INTEGER\><br>
-
-If you want particles to spawn upon the player finishing their character setup, set spawnParticles to be true, else, set it to false.<br>
+<br>
+### Particles
+If you want particles to spawn upon the player finishing their character setup, toggle the following variable:<br>
 <b>spawnParticles</b>: \<BOOLEAN\>
+<br>
+### Create Characters
+If you want players to be able to create characters, toggle the following variable:<br>
+<b>scharacterCreation</b>: \<BOOLEAN\>
