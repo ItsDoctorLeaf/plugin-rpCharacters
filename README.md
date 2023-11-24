@@ -9,7 +9,7 @@ Want the pre-setup version? Check download this:
 This is a plugin for minecraft java edition [1.20] and allows you to create roleplay characters for your server
 Upon startup, you are provided with a config that lets you set things such as the starting position of the player (preferably a void box) aswell as the position for the main hub. You can also set whether the spawn particles appear and whether the character creator is active upon startup.<br>
 You can set your players nickname, which can be limited by a "banned phrases" text file in the config area. Each line is a new banned phrases, it is NOT case sensitive but DOES recognise spaces and special characters.<br>
-You can set a players gender based off of 5 selectable options, MALE, FEMALE, NONBINARY, GENDERFLUID and GENDERNEUTRAL.
+You can set a players gender based off of 5 selectable options:<br> MALE, FEMALE, NONBINARY, GENDERFLUID and GENDERNEUTRAL.
 <br><br>
 ## Commands
 ### /new-characer
@@ -47,12 +47,15 @@ To set up the server, place in the config and the banned phrases into the file. 
 The config setup is:<br><br>
 
 ### Start Position
-To setup the start position (Where a void box should be), set the following variables<br>
+To setup the start position (Where a void box should be), set the following variables:<br>
 <b>startX</b>: \<INTEGER\><br>
 <b>startY</b>: \<INTEGER\><br>
 <b>startZ</b>: \<INTEGER\><br>
 <br>
-To setup the spawn position (Where the main spawn should be), set the following variables<br>
+To setup the spawn position (Where the main spawn should be), set the following variables:<br>
 <b>spawnX</b>: \<INTEGER\><br>
 <b>spawnY</b>: \<INTEGER\><br>
 <b>spawnZ</b>: \<INTEGER\><br>
+
+If you want particles to spawn upon the player finishing their character setup, set spawnParticles to be true, else, set it to false.<br>
+<b>spawnParticles</b>: \<BOOLEAN\>
