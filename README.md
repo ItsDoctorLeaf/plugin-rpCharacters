@@ -47,7 +47,7 @@ To set up the server, place in the config and the banned phrases into the file. 
 The config setup is:<br><br>
 
 ### Server Name
-When a player starts to create a character, this is the name of the server that appears upon character creation and in the welcome message:
+When a player starts to create a character, this is the name of the server that appears upon character creation and in the welcome message:<br>
 <b>serverDisplayName</b>: \<STRING\><br>
 <br>
 ### Do Welcome Message
