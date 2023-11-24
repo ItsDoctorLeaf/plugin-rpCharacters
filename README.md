@@ -47,7 +47,12 @@ To set up the server, place in the config and the banned phrases into the file. 
 The config setup is:<br><br>
 
 ### Start Position
-To setup the start position, set the following variables<br>
+To setup the start position (Where a void box should be), set the following variables<br>
 <b>startX</b>: \<INTEGER\><br>
 <b>startY</b>: \<INTEGER\><br>
 <b>startZ</b>: \<INTEGER\><br>
+<br>
+To setup the spawn position (Where the main spawn should be), set the following variables<br>
+<b>spawnX</b>: \<INTEGER\><br>
+<b>spawnY</b>: \<INTEGER\><br>
+<b>spawnZ</b>: \<INTEGER\><br>
