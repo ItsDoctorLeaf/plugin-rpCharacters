@@ -3,7 +3,7 @@
 <br>
 
 Want the pre-setup version? Check download this:<br>
-https://github.com/ItsDoctorLeaf/plugin-rpCharacters/blob/main/out/artifacts/WOK_CharcterCreations/WOK-CharcterCreations.jar
+https://github.com/ItsDoctorLeaf/plugin-rpCharacters/tree/main/dragAndDrop
 
 ## Features
 This is a plugin for minecraft java edition [1.20] and allows you to create role play characters for your server
