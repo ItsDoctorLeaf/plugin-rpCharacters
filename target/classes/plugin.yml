@@ -1,0 +1,28 @@
+name: WOK-CharacterCreation
+version: '${ALPHA}'
+main: org.drl.wokcharactercreation.WOK_CharacterCreation
+api-version: '1.20'
+author: 'DoctorLeaf'
+commands:
+  new-character:
+    usage: /<command>
+    description: Creates you a new RP character
+  realname:
+    usage: /<command>
+    description: Gives you the real name of an RP player
+  playerinfo:
+    usage: /<command>
+    description: Gives you information about an RP player
+  rpname:
+    usage: /<command>
+    description: Gives you the RP name of a player
+
+  reloadBannedWords:
+    usage: /<command>
+    description: Reloads the banned word list for names
+    permission: op
+
+  cc-reloadconfig:
+    usage: /<command>
+    description: Re-reads information from the config file
+    permission: op

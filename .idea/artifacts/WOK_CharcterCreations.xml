@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="WOK-CharcterCreations">
+    <output-path>$PROJECT_DIR$/out/artifacts/WOK_CharcterCreations</output-path>
+    <root id="archive" name="WOK-CharcterCreations.jar">
+      <element id="module-output" name="WOK-CharacterCreation" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+    </root>
+  </artifact>
+</component>
