@@ -56,6 +56,8 @@ public final class WOK_CharacterCreation extends JavaPlugin implements Listener,
 
     String serverName = "";
 
+    boolean doWelcomeMessage;
+
     @Override
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(this,this);
@@ -66,8 +68,12 @@ public final class WOK_CharacterCreation extends JavaPlugin implements Listener,
         this.getCommand("new-character").setExecutor(new CommandExecutor() {
             @Override
             public boolean onCommand(CommandSender commandSender, Command command, String s, String[] strings) {
+                if (!(commandSender instanceof Player))
+                {
+                    return false;
+                }
                 Player p = (Player) commandSender;
-
+                if (!doCreateNewCharacters) {p.sendMessage("Server has currently disabled the creation of new characters!"); return true;}
                 ResetPlayerCharacter(p);
                 IntroductorySequence(p);
                 inProcessOfJoining.add(p);
@@ -210,7 +216,7 @@ public final class WOK_CharacterCreation extends JavaPlugin implements Listener,
     @EventHandler
     public void PlayerJoinEvent(PlayerJoinEvent event)
     {
-        if (!doCreateNewCharacters) {return;}
+
         // Checks if the player has RP data set, if not, then it creates it
         // If the player does have RP data, it renames them etc
         PersistentDataContainer data = event.getPlayer().getPersistentDataContainer();
@@ -221,6 +227,7 @@ public final class WOK_CharacterCreation extends JavaPlugin implements Listener,
             PlayerPostSetData(event.getPlayer());
             return;
         }
+        if (!doCreateNewCharacters) {return;}
         event.getPlayer().addPotionEffect(PotionEffectType.WEAKNESS.createEffect(999999,255));
         IntroductorySequence(event.getPlayer());
         inProcessOfJoining.add(event.getPlayer());
@@ -304,7 +311,7 @@ public final class WOK_CharacterCreation extends JavaPlugin implements Listener,
         player.getInventory().clear();
         player.teleport(new Location(player.getWorld(),0,0,0));
         player.playSound(player.getLocation(),Sound.ITEM_GOAT_HORN_SOUND_0,1,1);
-        Titles.SendTitle(player,Titles.format("&6")+"World of Kingdoms.",10,60,30);
+        Titles.SendTitle(player,Titles.format("&6")+serverName,10,60,30);
         BukkitRunnable runnable = new BukkitRunnable() {
             @Override
             public void run() {
@@ -320,7 +327,7 @@ public final class WOK_CharacterCreation extends JavaPlugin implements Listener,
     {
         // Adds the player to being able to select their name
         PingSound(player,.5f);
-        player.sendMessage("Welcome to "+Titles.format("&6")+Titles.format("&l")+"World of Kingdoms!\n"+Titles.format("&r")+"Lets create you an awesome character!\n\n"+Titles.format("&a")+"Enter your new name!\n");
+        player.sendMessage("Welcome to "+Titles.format("&6")+Titles.format("&l")+serverName + "\n"+Titles.format("&r")+"Lets create you an awesome character!\n\n"+Titles.format("&a")+"Enter your new name!\n");
         currentlySelectingName.add(player);
     }
 
@@ -395,8 +402,10 @@ public final class WOK_CharacterCreation extends JavaPlugin implements Listener,
         playersInventories.remove(point);
         // Sends an alert to the server so people can welcome the player
         // Sends them to spawn region
-        getServer().broadcastMessage(Titles.format("&e")+Titles.format("&l")+"[!] Everyone welcome " + player.getDisplayName() + " [" + player.getName() + "] to the server!");
-        Titles.SendTitle(player,Titles.format("&e")+"Welcome, " + player.getDisplayName(),Titles.format("&e")+ " to World Of Kingdoms!\n",10,40,20);
+        if (doWelcomeMessage) {
+            getServer().broadcastMessage(Titles.format("&e") + Titles.format("&l") + "[!] Everyone welcome " + player.getDisplayName() + " [" + player.getName() + "] to the server!");
+        }
+        Titles.SendTitle(player,Titles.format("&e")+"Welcome, " + player.getDisplayName(),Titles.format("&e")+ " to "+serverName+"\n",10,40,20);
         player.removePotionEffect(PotionEffectType.INVISIBILITY);
         player.removePotionEffect(PotionEffectType.WEAKNESS);
         // Runs a cool particle affect and teleports the player
@@ -537,6 +546,8 @@ public final class WOK_CharacterCreation extends JavaPlugin implements Listener,
     {
         reloadConfig();
         config = this.getConfig();
+        config.addDefault("serverDisplayName","SERVERNAME");
+        config.addDefault("doWelcomeMessage",true);
         config.addDefault("startX", 0);
         config.addDefault("startY", 0);
         config.addDefault("startZ", 0);
@@ -547,16 +558,7 @@ public final class WOK_CharacterCreation extends JavaPlugin implements Listener,
         config.addDefault("characterCreation", true);
         config.options().copyDefaults(true);
         saveConfig();
-        chooseLocation.setX(config.getDouble("startX"));
-        chooseLocation.setY(config.getDouble("startY"));
-        chooseLocation.setZ(config.getDouble("startZ"));
-
-        spawnLocation.setX(config.getDouble("spawnX"));
-        spawnLocation.setY(config.getDouble("spawnY"));
-        spawnLocation.setZ(config.getDouble("spawnZ"));
-
-        spawnParticles = config.getBoolean("spawnParticles");
-        doCreateNewCharacters = config.getBoolean("characterCreation");
+        RefreshConfig();
     }
 
     void RefreshConfig()
@@ -573,12 +575,17 @@ public final class WOK_CharacterCreation extends JavaPlugin implements Listener,
 
         spawnParticles = config.getBoolean("spawnParticles");
         doCreateNewCharacters = config.getBoolean("characterCreation");
+
+        serverName = config.getString("serverDisplayName");
+        doWelcomeMessage = config.getBoolean("doWelcomeMessage");
     }
 }
 
 /*
 *    TODO
-*  - Add server name into config
+
+*  - Add toggles for gender options in config
+*
 *  - Add command toggles into config
 *
 * */
