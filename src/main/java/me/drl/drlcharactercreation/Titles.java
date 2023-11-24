@@ -1,4 +1,4 @@
-package org.drl.wokcharactercreation;
+package me.drl.drlcharactercreation;
 
 import net.md_5.bungee.api.ChatMessageType;
 import net.md_5.bungee.api.chat.TextComponent;

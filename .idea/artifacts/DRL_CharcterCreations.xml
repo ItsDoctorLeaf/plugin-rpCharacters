@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="DRL-CharcterCreations">
+    <output-path>$PROJECT_DIR$/../DRL-CharacterCreation/out/artifacts/DRL_CharcterCreations</output-path>
+    <root id="archive" name="DRL-CharcterCreations.jar">
+      <element id="module-output" name="DRL-CharacterCreation" />
+      <element id="file-copy" path="$PROJECT_DIR$/src/main/resources/plugin.yml" />
+    </root>
+  </artifact>
+</component>

@@ -1,4 +1,4 @@
-package org.drl.wokcharactercreation;
+package me.drl.drlcharactercreation;
 
 import org.bukkit.*;
 import org.bukkit.command.Command;
@@ -33,7 +33,7 @@ enum Gender
     Other
 
 }
-public final class WOK_CharacterCreation extends JavaPlugin implements Listener, CommandExecutor {
+public final class DRL_CharacterCreation extends JavaPlugin implements Listener, CommandExecutor {
 
     ArrayList<Player> currentlySelectingName = new ArrayList<>();
     ArrayList<Player> currentlySelectingGender = new ArrayList<>();

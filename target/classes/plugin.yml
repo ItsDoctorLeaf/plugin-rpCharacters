@@ -1,6 +1,6 @@
 name: WOK-CharacterCreation
 version: '${ALPHA}'
-main: org.drl.wokcharactercreation.WOK_CharacterCreation
+main: me.drl.drlcharactercreation.WOK_CharacterCreation
 api-version: '1.20'
 author: 'DoctorLeaf'
 commands:

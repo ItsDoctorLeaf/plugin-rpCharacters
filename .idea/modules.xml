@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/WOK-CharacterCreation.iml" filepath="$PROJECT_DIR$/WOK-CharacterCreation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DRL-CharacterCreation.iml" filepath="$PROJECT_DIR$/DRL-CharacterCreation.iml" />
     </modules>
   </component>
 </project>

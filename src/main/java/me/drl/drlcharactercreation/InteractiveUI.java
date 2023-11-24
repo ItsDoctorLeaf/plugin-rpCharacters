@@ -1,4 +1,4 @@
-package org.drl.wokcharactercreation;
+package me.drl.drlcharactercreation;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Material;

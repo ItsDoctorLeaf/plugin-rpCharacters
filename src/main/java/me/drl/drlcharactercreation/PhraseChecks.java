@@ -1,12 +1,9 @@
-package org.drl.wokcharactercreation;
+package me.drl.drlcharactercreation;
 
 import java.io.*;
 import java.util.ArrayList;
-import java.util.Arrays;
 
-import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
-import org.checkerframework.checker.units.qual.A;
 
 public class PhraseChecks {
     Plugin plugin;
