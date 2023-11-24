@@ -54,6 +54,8 @@ public final class WOK_CharacterCreation extends JavaPlugin implements Listener,
 
     FileConfiguration config = this.getConfig();
 
+    String serverName = "";
+
     @Override
     public void onEnable() {
         Bukkit.getPluginManager().registerEvents(this,this);
