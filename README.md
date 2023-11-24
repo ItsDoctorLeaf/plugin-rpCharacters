@@ -2,7 +2,7 @@
 ### A Character creator for minecraft java.
 <br>
 
-Want the pre-setup version? Check download this:
+Want the pre-setup version? Check download this:<br>
 https://github.com/ItsDoctorLeaf/plugin-rpCharacters/blob/main/out/artifacts/WOK_CharcterCreations/WOK-CharcterCreations.jar
 
 ## Features
