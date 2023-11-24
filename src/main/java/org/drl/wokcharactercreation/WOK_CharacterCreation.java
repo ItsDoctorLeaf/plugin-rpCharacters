@@ -575,3 +575,10 @@ public final class WOK_CharacterCreation extends JavaPlugin implements Listener,
         doCreateNewCharacters = config.getBoolean("characterCreation");
     }
 }
+
+/*
+*    TODO
+*  - Add server name into config
+*  - Add command toggles into config
+*
+* */
