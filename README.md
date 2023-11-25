@@ -35,7 +35,7 @@ No permissions required.<br>
 
 ### /playerInfo
 Gives you information about a player, their real name, their rp name, their gender.<br>
-/playerinfo \<PLAYER\><br>
+/playerinfo \<RPNAME\><br>
 No permissions required.<br>
 
 ### /reloadBannedWords
