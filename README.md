@@ -1,8 +1,13 @@
-![rpcctitle](https://github.com/ItsDoctorLeaf/plugin-rpCharacters/assets/106929792/44bf8b6f-c686-46e5-8ab0-64b24d196935)
+
+<p align="center" width="100%">
+    <img src="https://github.com/ItsDoctorLeaf/plugin-rpCharacters/assets/106929792/44bf8b6f-c686-46e5-8ab0-64b24d196935"> 
+    <img src="https://github.com/ItsDoctorLeaf/plugin-rpCharacters/assets/106929792/c03789b9-cee0-4ac3-9927-5731eb9cad36">
+</p><br>
 
 # RP Character Creator [ALPHA]
 ### A Character creator for minecraft java.
 <br>
+
 
 > [!WARNING]
 > This plugin in currently in alpha. It WILL contain bugs and issues, so please do report them if you find any.
