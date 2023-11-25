@@ -580,12 +580,3 @@ public final class DRL_CharacterCreation extends JavaPlugin implements Listener,
         doWelcomeMessage = config.getBoolean("doWelcomeMessage");
     }
 }
-
-/*
-*    TODO
-
-*  - Add toggles for gender options in config
-*
-*  - Add command toggles into config
-*
-* */
