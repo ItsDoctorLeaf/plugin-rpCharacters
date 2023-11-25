@@ -2,7 +2,7 @@
 ### A Character creator for minecraft java.
 <br>
 
-> :warning: This plugin in currently in alpha. It will contain bugs and is subject to many changes!
+[!IMPORTANT] This plugin in currently in alpha. It will contain bugs and is subject to many changes!
 Want the pre-setup version? Check download this:<br>
 https://github.com/ItsDoctorLeaf/plugin-rpCharacters/tree/main/dragAndDrop
 
