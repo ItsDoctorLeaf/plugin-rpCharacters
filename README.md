@@ -1,11 +1,11 @@
-![rpctitle](https://github.com/ItsDoctorLeaf/plugin-rpCharacters/assets/106929792/44bf8b6f-c686-46e5-8ab0-64b24d196935)
+![rpcctitle](https://github.com/ItsDoctorLeaf/plugin-rpCharacters/assets/106929792/44bf8b6f-c686-46e5-8ab0-64b24d196935)
 # RP Character Creator [ALPHA]
 ### A Character creator for minecraft java.
 <br>
 
 > [!WARNING]
 > This plugin in currently in alpha. It WILL contain bugs and issues, so please do report them if you find any.
-> There is a high likelyhood that config and affects will change in the future. If you have any reccomendations, please do send me them.<br><br>
+> There is a high likely-hood that config and affects will change in the future. If you have any reccomendations, please do send me them.<br><br>
 
 Want the pre-setup version? Check download this:<br>
 https://github.com/ItsDoctorLeaf/plugin-rpCharacters/tree/main/dragAndDrop

@@ -103,13 +103,18 @@ public final class DRL_CharacterCreation extends JavaPlugin implements Listener,
                 input = input.substring(0,input.length()-1);
                 for (Player p : playersOnline)
                 {
-                    if (p.getDisplayName().equals(input)) {
-                        player.sendMessage(Titles.format("&a") + "[RP] The real name of " + input + " is " + p.getName());
-                        return true;
+                    PersistentDataContainer container = p.getPersistentDataContainer();
+                    if (container.has(NamespacedKey.fromString("rpName"),PersistentDataType.STRING))
+                    {
+                        String name = container.get(NamespacedKey.fromString("rpName"),PersistentDataType.STRING);
+                        if (input.equals(name)) {
+                            player.sendMessage(Titles.format("&a") + "[RP] The real name of " + input + " is " + p.getName());
+                            return true;
+                        }
                     }
 
                 }
-                player.sendMessage(Titles.format("&c") + "[RP] There are no online players that match the name of " + input + "!");
+                player.sendMessage(Titles.format("&c") + "[RP] There are no online players that match the name of " + input + "! Please enter their RP name, as seen in tablist.");
 
                 return true;
             }
@@ -134,16 +139,18 @@ public final class DRL_CharacterCreation extends JavaPlugin implements Listener,
                 input = input.substring(0,input.length()-1);
                 for (Player p : playersOnline)
                 {
-                    if (p.getDisplayName().equals(input))
-                    {
-                        PersistentDataContainer data = p.getPersistentDataContainer();
-                        NamespacedKey rpGender = new NamespacedKey(plugin,"rpGender");
-                        player.sendMessage(Titles.format("&a") +Titles.format("&l")+ "--- " + input + " [" + p.getName() + "] ---\n" + Titles.format("&r") + Titles.format("&a") + "Gender: " +Titles.format("&r")+ IntegerToGender(data.get(rpGender,PersistentDataType.INTEGER)).toString() + "\n");
-                        return true;
+                    PersistentDataContainer data = p.getPersistentDataContainer();
+                    if (data.has(NamespacedKey.fromString("rpName"),PersistentDataType.STRING)) {
+                        String name = data.get(NamespacedKey.fromString("rpName"),PersistentDataType.STRING);
+                        if (input.equals(name)) {
+                            NamespacedKey rpGender = new NamespacedKey(plugin, "rpGender");
+                            player.sendMessage(Titles.format("&a") + Titles.format("&l") + "--- " + input + " [" + p.getName() + "] ---\n" + Titles.format("&r") + Titles.format("&a") + "Gender: " + Titles.format("&r") + IntegerToGender(data.get(rpGender, PersistentDataType.INTEGER)).toString() + "\n");
+                            return true;
+                        }
                     }
 
                 }
-                player.sendMessage(Titles.format("&c") + "[RP] There are no online players that match the name of " + input + "!");
+                player.sendMessage(Titles.format("&c") + "[RP] There are no online players that match the name of " + input + "! Please specify their RP name.");
 
                 return true;
             }
@@ -163,10 +170,16 @@ public final class DRL_CharacterCreation extends JavaPlugin implements Listener,
 
                 for (Player p : playersOnline)
                 {
-                    if (p.getName().equals(strings[0])) {
-                        player.sendMessage(Titles.format("&a") + "[RP] The role play of " + strings[0] + " is " + p.getDisplayName());
-                        return true;
+                    PersistentDataContainer container = p.getPersistentDataContainer();
+                    if (container.has(NamespacedKey.fromString("rpName"),PersistentDataType.STRING))
+                    {
+                        String name = container.get(NamespacedKey.fromString("rpName"),PersistentDataType.STRING);
+                        if (strings[0].equals(name)) {
+                            player.sendMessage(Titles.format("&a") + "[RP] The role play of " + strings[0] + " is " + p.getDisplayName());
+                            return true;
+                        }
                     }
+
 
                 }
                 player.sendMessage(Titles.format("&c") + "[RP] There are no online players that match the name of " + strings[0] + "!");
@@ -395,7 +408,7 @@ public final class DRL_CharacterCreation extends JavaPlugin implements Listener,
         data.set(rpGender,PersistentDataType.INTEGER,GenderToInteger(gender));
 
         // Tells the player the gender they selected and removes them from lists
-        player.sendMessage(Titles.format("&a")+"You have selected " + gender.toString() + ". You can change this at any time with /setGender");
+        player.sendMessage(Titles.format("&a")+"You have selected " + gender.toString() + ". You can change this at any time with /new-character");
 
 
         inProcessOfJoining.remove(player);
