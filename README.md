@@ -1,4 +1,4 @@
-# RP Character Creator 
+# RP Character Creator [ALPHA]
 ### A Character creator for minecraft java.
 <br>
 
