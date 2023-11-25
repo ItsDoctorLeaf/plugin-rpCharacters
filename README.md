@@ -1,5 +1,4 @@
 ![rpcctitle](https://github.com/ItsDoctorLeaf/plugin-rpCharacters/assets/106929792/44bf8b6f-c686-46e5-8ab0-64b24d196935)
-![alphawatermark](https://github.com/ItsDoctorLeaf/plugin-rpCharacters/assets/106929792/d0f0b436-d74d-4ff8-8138-814c6117ae79)
 
 # RP Character Creator [ALPHA]
 ### A Character creator for minecraft java.
