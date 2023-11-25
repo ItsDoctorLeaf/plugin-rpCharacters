@@ -1,3 +1,4 @@
+![rpctitle](https://github.com/ItsDoctorLeaf/plugin-rpCharacters/assets/106929792/44bf8b6f-c686-46e5-8ab0-64b24d196935)
 # RP Character Creator [ALPHA]
 ### A Character creator for minecraft java.
 <br>
@@ -17,6 +18,7 @@ You can set a players gender based off of 5 selectable options:<br> MALE, FEMALE
 <br><br>
 ## Commands
 ### /new-character
+
 Lets a player create a new character, can be turned on or off in config file.<br>
 /new-character<br>
 No permissions required.<br>
