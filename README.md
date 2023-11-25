@@ -2,8 +2,9 @@
 ### A Character creator for minecraft java.
 <br>
 
-> [!IMPORTANT]
-> This plugin in currently in alpha. It will contain bugs and is subject to many changes!
+> [!WARNING]
+> This plugin in currently in alpha. It WILL contain bugs and issues, so please do report them if you find any.
+> There is a high likelyhood that config and affects will change in the future. If you have any reccomendations, please do send me them
 Want the pre-setup version? Check download this:<br>
 https://github.com/ItsDoctorLeaf/plugin-rpCharacters/tree/main/dragAndDrop
 
